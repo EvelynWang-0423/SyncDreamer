@@ -174,14 +174,14 @@ def run_demo():
 
     # NOTE: Examples must match inputs
     examples_full = [
-        ['hf_demo/examples/basket.png',30,200],
+        ['hf_demo/examples/monkey.png',30,200],
         ['hf_demo/examples/cat.png',30,200],
         ['hf_demo/examples/crab.png',30,200],
         ['hf_demo/examples/elephant.png',30,200],
         ['hf_demo/examples/flower.png',0,200],
         ['hf_demo/examples/forest.png',30,200],
-        ['hf_demo/examples/monkey.png',30,200],
         ['hf_demo/examples/teapot.png',20,200],
+        ['hf_demo/examples/basket.png',30,200],
     ]
 
     image_block = gr.Image(type='pil', image_mode='RGBA', height=256, label='Input image', tool=None, interactive=True)
