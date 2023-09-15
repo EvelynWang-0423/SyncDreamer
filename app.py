@@ -24,13 +24,13 @@ Given a single-view image, SyncDreamer is able to generate multiview-consistent 
 
 Procedure: </br>
 **Step 1**. Upload an image or select an example.  ==> The foreground is masked out by SAM and we crop it as inputs. </br>
-**Step 2**. Select "Elevation angle "and click "Run generation". ==> Generate multiview images. (This costs about 30s.) </br>
+**Step 2**. Select "Elevation angle "and click "Run generation". ==> Generate multiview images. The **Elevation angle** is the elevation of input image. (This costs about 30s.) </br>
 You may adjust the **Crop size** and **Elevation angle** to get a better result! <br>
 To reconstruct a NeRF or a 3D mesh from the generated images, please refer to our [github repository](https://github.com/liuyuan-pal/SyncDreamer).
 '''
 _USER_GUIDE0 = "Step1: Please upload an image in the block above (or choose an example shown in the left)."
 # _USER_GUIDE1 = "Step1: Please select a **Crop size** and click **Crop it**."
-_USER_GUIDE2 = "Step2: Please choose a **Elevation angle** and click **Run Generate**. This costs about 30s."
+_USER_GUIDE2 = "Step2: Please choose a **Elevation angle** and click **Run Generate**. The **Elevation angle** is the elevation of input image. This costs about 30s."
 _USER_GUIDE3 = "Generated multiview images are shown below! (You may adjust the **Crop size** and **Elevation angle** to get a better result!)"
 
 others = '''**Step 1**. Select "Crop size" and click "Crop it". ==> The foreground object is centered and resized. </br>'''
