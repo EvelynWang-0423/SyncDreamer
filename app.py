@@ -242,16 +242,16 @@ def run_demo():
         update_guide = lambda GUIDE_TEXT: gr.update(value=GUIDE_TEXT)
 
         image_block.clear(fn=partial(update_guide, _USER_GUIDE0), outputs=[guide_text], queue=False)
-        image_block.change(fn=partial(sam_predict, mask_predictor, removal), inputs=[image_block], outputs=[sam_block], queue=False) \
-                   .success(fn=resize_inputs, inputs=[sam_block, crop_size], outputs=[input_block], queue=False)\
+        image_block.change(fn=partial(sam_predict, mask_predictor, removal), inputs=[image_block], outputs=[sam_block], queue=True) \
+                   .success(fn=resize_inputs, inputs=[sam_block, crop_size], outputs=[input_block], queue=True)\
                    .success(fn=partial(update_guide2, _USER_GUIDE2), inputs=[image_block], outputs=[guide_text], queue=False)\
 
-        crop_size.change(fn=resize_inputs, inputs=[sam_block, crop_size], outputs=[input_block], queue=False)\
+        crop_size.change(fn=resize_inputs, inputs=[sam_block, crop_size], outputs=[input_block], queue=True)\
                  .success(fn=partial(update_guide, _USER_GUIDE2), outputs=[guide_text], queue=False)
         # crop_btn.click(fn=resize_inputs, inputs=[sam_block, crop_size], outputs=[input_block], queue=False)\
         #                .success(fn=partial(update_guide, _USER_GUIDE2), outputs=[guide_text], queue=False)
 
-        run_btn.click(partial(generate, model), inputs=[sample_steps, batch_view_num, sample_num, cfg_scale, seed, input_block, elevation], outputs=[output_block], queue=False)\
+        run_btn.click(partial(generate, model), inputs=[sample_steps, batch_view_num, sample_num, cfg_scale, seed, input_block, elevation], outputs=[output_block], queue=True)\
                .success(fn=partial(update_guide, _USER_GUIDE3), outputs=[guide_text], queue=False)
 
     demo.queue().launch(share=False, max_threads=80)  # auth=("admin", os.environ['PASSWD'])
