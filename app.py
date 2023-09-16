@@ -27,7 +27,7 @@ Procedure: </br>
 **Step 2**. Select "Elevation angle "and click "Run generation". ==> Generate multiview images. The **Elevation angle** is the elevation of the input image. (This costs about 30s.) </br>
 You may adjust the **Crop size** and **Elevation angle** to get a better result! <br>
 To reconstruct a NeRF or a 3D mesh from the generated images, please refer to our [github repository](https://github.com/liuyuan-pal/SyncDreamer). <br>
-We have heavily borrow codes from [One-2-3-45](https://huggingface.co/spaces/One-2-3-45/One-2-3-45), which is also an amazing single-view reconstruction method. 
+We have heavily borrowed codes from [One-2-3-45](https://huggingface.co/spaces/One-2-3-45/One-2-3-45), which is also an amazing single-view reconstruction method. 
 '''
 _USER_GUIDE0 = "Step1: Please upload an image in the block above (or choose an example shown in the left)."
 # _USER_GUIDE1 = "Step1: Please select a **Crop size** and click **Crop it**."
