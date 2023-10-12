@@ -159,7 +159,7 @@ def run_demo():
     # models = None # init_model(device, os.path.join(code_dir, ckpt))
     # download(model_repo='username/model_repo_name', model_name='model_name', output='/home/xlab-app-center')
     cfg = 'configs/syncdreamer.yaml'
-    ckpt = 'ckpt/syncdreamer-pretrain.ckpt'
+    ckpt = '/home/xlab-app-center/syncdreamer-pretrain.ckpt'
     config = OmegaConf.load(cfg)
     # model = None
     if deployed:
