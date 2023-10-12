@@ -12,6 +12,8 @@ from ldm.models.diffusion.sync_dreamer import SyncDDIMSampler, SyncMultiviewDiff
 from ldm.util import add_margin, instantiate_from_config
 from sam_utils import sam_init, sam_out_nosave
 
+from openxlab.model import download
+
 import torch
 _TITLE = '''SyncDreamer: Generating Multiview-consistent Images from a Single-view Image'''
 _DESCRIPTION = '''
@@ -155,6 +157,7 @@ def sam_predict(predictor, removal, raw_im):
 def run_demo():
     # device = f"cuda:0" if torch.cuda.is_available() else "cpu"
     # models = None # init_model(device, os.path.join(code_dir, ckpt))
+    # download(model_repo='username/model_repo_name', model_name='model_name', output='/home/xlab-app-center')
     cfg = 'configs/syncdreamer.yaml'
     ckpt = 'ckpt/syncdreamer-pretrain.ckpt'
     config = OmegaConf.load(cfg)
