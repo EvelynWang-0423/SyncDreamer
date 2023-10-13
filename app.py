@@ -157,7 +157,9 @@ def sam_predict(predictor, removal, raw_im):
 def run_demo():
     # device = f"cuda:0" if torch.cuda.is_available() else "cpu"
     # models = None # init_model(device, os.path.join(code_dir, ckpt))
-    # download(model_repo='username/model_repo_name', model_name='model_name', output='/home/xlab-app-center')
+    download(model_repo='Evelyn/SyncDreamer', model_name='syncdreamer-pretrain.ckpt', output='/home/xlab-app-center')
+    download(model_repo='Evelyn/SyncDreamer', model_name='sam_vit_h_4b8939.pth', output='/home/xlab-app-center')
+    download(model_repo='Evelyn/SyncDreamer', model_name='ViT-L-14.pt', output='/home/xlab-app-center')
     cfg = 'configs/syncdreamer.yaml'
     ckpt = '/home/xlab-app-center/syncdreamer-pretrain.ckpt'
     config = OmegaConf.load(cfg)
